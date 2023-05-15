@@ -1,0 +1,36 @@
+.rngTV {
+  display: block;
+  background-color: purple;
+  min-height: 4rem;
+  min-width: 10rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: row;
+  resize: both;
+  border: 2px solid blue;
+  cursor: grab;
+}
+
+.rngTV:active {
+  cursor: grabbing;
+}
+
+.innerLeft {
+  background-color: aqua;
+  flex: 3 1 0;
+  max-width: 75%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerRight {
+  background-color: lightblue;
+  flex: 1 1 0;
+  max-width: 25%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

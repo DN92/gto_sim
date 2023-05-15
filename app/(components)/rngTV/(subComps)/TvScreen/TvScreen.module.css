@@ -1,0 +1,21 @@
+.tvScreen {
+  border-radius: 8px;
+  background-color: grey;
+  height: 80%;
+  width: 90%;
+  margin: 0 0 0 .0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tvDisplayOuter {
+  max-width: 100%;
+}
+
+.tvDisplayInner {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
