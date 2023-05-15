@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 
 import styles from './rngTV.module.css'
 import TvScreen from './(subComps)/TvScreen/TvScreen'
+import XByYGrid from './(subComps)/XByYGrid/XByYGrid'
 
 const RngTV = () => {
 
@@ -47,10 +48,14 @@ const RngTV = () => {
       onDrag={handleDrag}
       onDragEnd={handleDragEnd}
     >
+      {/* left side of tv box*/}
       <div className={styles.innerLeft}>
         <TvScreen />
       </div>
-      <div className={styles.innerRight}> </div>
+      {/* right side of tv box*/}
+      <div className={styles.innerRight}>
+        <XByYGrid columns={3} rows={2} />
+      </div>
 
     </div>
   )

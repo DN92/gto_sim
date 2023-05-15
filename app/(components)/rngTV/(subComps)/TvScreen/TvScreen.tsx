@@ -33,11 +33,31 @@ const TvScreen = () => {
   }
 
   const [rgn, setRgn] = useState(getRandomNumber());
+  
+  async function scrambledRgnsAtRate(timesPerSecond: number, milliseconds: number) {
+    function sleep(ms: number): Promise<void> {
+      return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+      });
+    }
+
+    function getNewRgn(inputRange: number = 100) {
+      const newNumber = getRandomNumber(inputRange)
+      // console.log(newNumber)
+      setRgn(newNumber)
+    }
+
+    for (let i = 0; i < timesPerSecond * Math.ceil(milliseconds / 1000); i++) {
+      await sleep(Math.floor(1000 / timesPerSecond))
+      getNewRgn()
+    }
+  }
 
   useEffect(() => {
+
     const rgnSetter = setInterval(() => {
-      setRgn(getRandomNumber()) 
-    }, 3 * 1000)
+      scrambledRgnsAtRate(18, 300)
+    }, 6 * 1000)
 
     return () => clearInterval(rgnSetter)
   }, [])

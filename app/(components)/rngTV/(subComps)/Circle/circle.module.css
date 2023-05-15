@@ -2,6 +2,9 @@
   height: 100px;
   aspect-ratio: 1/1;
   border-radius: 100%;
-  background-color: blue;
+  background-color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
